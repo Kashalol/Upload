@@ -1,4 +1,4 @@
-package com.company.lesson7.classExercise;
+package com.company.lesson6.classExerciese;
 
 class Phone {
     String number;
