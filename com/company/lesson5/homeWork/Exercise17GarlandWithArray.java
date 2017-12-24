@@ -89,9 +89,9 @@ public class Exercise17GarlandWithArray {
         }
     }
 
-        static void garlandState (int[] garland2){
-            System.out.println(Arrays.toString(garland2));
-        }
+    static void garlandState(int[] garland2) {
+        System.out.println(Arrays.toString(garland2));
+    }
 
     public static int[] createGarlandArray() {
         int[] arr = new int[32];
