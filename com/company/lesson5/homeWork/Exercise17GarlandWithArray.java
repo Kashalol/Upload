@@ -45,7 +45,7 @@ public class Exercise17GarlandWithArray {
         System.out.println("Введите количество миганий");
         int i2 = sc1.nextInt();
         for (int i3 = 0; i3 < i2; i3++) {
-            for (i = 0; i < 4; i++) {
+            for (i = 0; i < 32; i++) {
                 if ((garland2[i]) == 0) {
                     tmp = 1;
                 } else {
@@ -53,34 +53,32 @@ public class Exercise17GarlandWithArray {
                 }
                 switchedGarland[i] = tmp;
             }
+            System.out.println(Arrays.toString(garland2));
+            System.out.println(Arrays.toString(switchedGarland));
         }
-        System.out.println(Arrays.toString(garland2));
-        System.out.println(Arrays.toString(switchedGarland));
         return garland2;
     }
 
-    static int[] movingRight(int[] garland2) {
-        int[] switchedGarland = new int[32];
+    static void movingRight(int[] garland2) {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
         int movingNumber = sc1.nextInt();
         for (int i = 0; i < movingNumber; i++) {
+            int[] switchedGarland = new int[32];
             System.arraycopy(garland2, 0, switchedGarland, i, (32 - i));
             System.out.println(Arrays.toString(switchedGarland));
         }
-        return switchedGarland;
     }
 
-    static int[] movingLeft(int[] garland2) {
-        int[] switchedGarland = new int[32];
+    static void movingLeft(int[] garland2) {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
         int movingNumber = sc1.nextInt();
         for (int i = 0; i < movingNumber; i++) {
+            int[] switchedGarland = new int[32];
             System.arraycopy(garland2, i, switchedGarland, 0, (32 - i));
             System.out.println(Arrays.toString(switchedGarland));
         }
-        return switchedGarland;
     }
 
     static void firstLamp(int[] garland2) {
@@ -98,7 +96,7 @@ public class Exercise17GarlandWithArray {
     public static int[] createGarlandArray() {
         int[] arr = new int[32];
         int i;
-        for (i = 0; i < 4; i++) {
+        for (i = 0; i < 32; i++) {
             int toArray = (int) (Math.random() * 2);
             arr[i] = toArray;
         }
