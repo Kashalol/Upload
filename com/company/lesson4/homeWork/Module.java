@@ -17,13 +17,13 @@ public class Module {
             } else {
                 System.out.println("Наименьшее число по модулю " + d3);
             }
-        }else {
+        } else {
             System.out.println("Ошибка ввода");
         }
     }
 
     public static double inputDouble(double dInput) {
-            dInput = dInput < 0 ? -dInput : dInput;
-            return dInput;
+        dInput = dInput < 0 ? -dInput : dInput;
+        return dInput;
     }
 }
