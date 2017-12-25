@@ -9,11 +9,11 @@ public class Factorial {
         System.out.println("Факториал числа " + randomNumber + " равен " + result);
     }
 
-    public static int factor(int i2) {
-        int i3 = 1;
-        for (int i = 1; i <= i2; i++) {
-            i3 = i3 * i;
+    public static int factor(int randomNumberInput) {
+        int startingPosition = 1;
+        for (int i = 1; i <= randomNumberInput; i++) {
+            startingPosition = startingPosition * i;
         }
-        return i3;
+        return startingPosition;
     }
 }

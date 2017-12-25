@@ -3,9 +3,9 @@ package com.company.lesson5.classExercise;
 public class DayOfWeek {
     public static void main(String[] args) {
         String str = args.length > 0 ? args[0] : "7";
-        int i1=Integer.parseInt(str);
+        int i1 = Integer.parseInt(str);
         String day;
-        switch (i1){
+        switch (i1) {
             case 1:
                 day = "Понедельник";
                 break;
@@ -25,7 +25,8 @@ public class DayOfWeek {
             case 7:
                 day = "Выходной";
                 break;
-                default: day="Облом";
+            default:
+                day = "Облом";
         }
         System.out.println(day);
     }

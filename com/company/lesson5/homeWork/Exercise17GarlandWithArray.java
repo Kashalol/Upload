@@ -38,46 +38,57 @@ public class Exercise17GarlandWithArray {
         }
     }
 
-    static int[] switching(int[] garland2) {
+    static void switching(int[] garland2) {
         int[] switchedGarland = new int[32];
         int i, tmp = 0;
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество миганий");
-        int i2 = sc1.nextInt();
-        for (int i3 = 0; i3 < i2; i3++) {
-            for (i = 0; i < 32; i++) {
-                if ((garland2[i]) == 0) {
-                    tmp = 1;
-                } else {
-                    tmp = 0;
+        if (sc1.hasNextInt()) {
+            int i2 = sc1.nextInt();
+            for (int i3 = 0; i3 < i2; i3++) {
+                for (i = 0; i < 32; i++) {
+                    if ((garland2[i]) == 0) {
+                        tmp = 1;
+                    } else {
+                        tmp = 0;
+                    }
+                    switchedGarland[i] = tmp;
                 }
-                switchedGarland[i] = tmp;
+                System.out.println(Arrays.toString(garland2));
+                System.out.println(Arrays.toString(switchedGarland));
             }
-            System.out.println(Arrays.toString(garland2));
-            System.out.println(Arrays.toString(switchedGarland));
+        } else {
+            System.out.println("Ошибка ввода");
         }
-        return garland2;
     }
 
     static void movingRight(int[] garland2) {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
-        int movingNumber = sc1.nextInt();
-        for (int i = 0; i < movingNumber; i++) {
-            int[] switchedGarland = new int[32];
-            System.arraycopy(garland2, 0, switchedGarland, i, (32 - i));
-            System.out.println(Arrays.toString(switchedGarland));
+        if (sc1.hasNextInt()) {
+            int movingNumber = sc1.nextInt();
+            for (int i = 0; i < movingNumber; i++) {
+                int[] switchedGarland = new int[32];
+                System.arraycopy(garland2, 0, switchedGarland, i, (32 - i));
+                System.out.println(Arrays.toString(switchedGarland));
+            }
+        } else {
+            System.out.println("Ошибка ввода");
         }
     }
 
     static void movingLeft(int[] garland2) {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
-        int movingNumber = sc1.nextInt();
-        for (int i = 0; i < movingNumber; i++) {
-            int[] switchedGarland = new int[32];
-            System.arraycopy(garland2, i, switchedGarland, 0, (32 - i));
-            System.out.println(Arrays.toString(switchedGarland));
+        if (sc1.hasNextInt()) {
+            int movingNumber = sc1.nextInt();
+            for (int i = 0; i < movingNumber; i++) {
+                int[] switchedGarland = new int[32];
+                System.arraycopy(garland2, i, switchedGarland, 0, (32 - i));
+                System.out.println(Arrays.toString(switchedGarland));
+            }
+        } else {
+            System.out.println("Ошибка ввода");
         }
     }
 

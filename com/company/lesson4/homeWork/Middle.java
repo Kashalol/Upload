@@ -4,8 +4,8 @@ public class Middle {
     public static void main(String[] args) {
         int count = 0;
         double d2 = 0.0;
-        for (String InputDoubles : args) {
-            double d1 = Double.parseDouble(InputDoubles);
+        for (String inputDoubles : args) {
+            double d1 = Double.parseDouble(inputDoubles);
             d2 = d2 + d1;
             count++;
         }

@@ -7,7 +7,7 @@ public class MassiveMultiDimensional {
         char c = 'a';
         for (i = 0; i < 3; i++, c++) {
             for (j = 0; j < 6; j++) {
-                special[i][j] = c + "" + (j+1);
+                special[i][j] = c + "" + (j + 1);
             }
         }
         for (i = 0; i < 3; i++) {
