@@ -2,9 +2,16 @@ package com.company.lesson3.homeWork;
 
 public class Convert {
     public static void main(String[] args) {
+        toByte();
+        toChar();
+        toDouble();
+        toFloat();
+        toInt();
+        toLong();
+        toShort();
     }
 
-    public static void ToByte() {
+    public static void toByte() {
         byte b1;
         byte b2 = 2;
         b1 = b2; //тождество
@@ -18,7 +25,7 @@ public class Convert {
         byte b6 = (byte) c1;
     }
 
-    public static void ToShort(String[] args) {
+    public static void toShort() {
         byte b1 = 1;
         short s1 = b1; //неявное
         short s3 = 232;
@@ -29,15 +36,25 @@ public class Convert {
         short s5 = (short) l1; //явное
     }
 
-    public static void ToChar(String[] args) {
+    public static void toChar() {
         char c1 = 'j';
         char c2 = 'r';
         c1 = c2; //тождетсво
+        byte b1 = 3;
+        char c3 = (char) b1; //явное
+        short s1 = 23;
+        char c4 = (char) s1; //явное
         int i1 = 36;
-        char c3 = (char) i1; //явное
+        char c5 = (char) i1; //явное
+        long l1 = 123;
+        char c6 = (char) l1; //явное
+        float f1 = 37.32f;
+        char c7 = (char) f1;
+        double d1 = 373;
+        char c8 = (char) d1;
     }
 
-    public static void ToInt(String[] args) {
+    public static void toInt() {
         byte b1 = 2;
         int i1 = b1; //неявное
         short s1 = 47;
@@ -54,7 +71,7 @@ public class Convert {
         int i8 = c1; //неявное
     }
 
-    public static void ForLong(String[] args) {
+    public static void toLong() {
         byte b1 = 3;
         long l1 = b1; //неявное
         short s1 = 235;
@@ -69,25 +86,33 @@ public class Convert {
         long l7 = (long) d1; //явное
     }
 
-    public static void ForFloat(String[] args) {
+    public static void toFloat() {
         float f1 = 23.125f;
         float f2 = f1; //тождество
         double d1 = 4512.314;
         float f3 = (float) d1; //явное
+        byte b1 = 6;
+        float f4 = (float) b1; //явное
+        short s1 = 34;
+        float f5 = (float) s1; //явное
         int i1 = 234;
-        float f4 = (float) i1; //явное
+        float f6 = (float) i1; //явное
         long l1 = 2836;
-        float f5 = (float) l1; //явное
+        float f7 = (float) l1; //явное
     }
 
-    public static void ForDouble(String[] args) {
+    public static void toDouble() {
         double d1 = 12351.534;
         double d2 = d1; //тождество
         float f1 = 235.243f;
         double d3 = f1; //неявное
+        byte b1 = 2;
+        double d4 = (double) b1; //явное
+        short s1 = 33;
+        double d5 = (double) s1; //явное
         int i1 = 234;
-        double d4 = (double) i1; //явное
+        double d6 = (double) i1; //явное
         long l1 = 21751;
-        double d5 = (double) l1; //явное
+        double d7 = (double) l1; //явное
     }
 }
