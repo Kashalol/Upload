@@ -2,7 +2,7 @@ package com.company.lesson5.homeWork;
 
 import java.util.Arrays;
 
-public class BubbleSorterInvertedTest {
+public class BubbleSorterBooleanTest {
     public static void main(String[] args) {
         int[][] data = {
                 {},
@@ -13,7 +13,7 @@ public class BubbleSorterInvertedTest {
         };
         for (int[] arr : data) {
             System.out.print(Arrays.toString(arr) + " => ");
-            BubbleSorterInverted.sort(arr);
+            BubbleSorterBoolean.sort(arr);
             System.out.println(Arrays.toString(arr));
         }
     }

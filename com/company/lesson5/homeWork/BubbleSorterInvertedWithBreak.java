@@ -1,6 +1,6 @@
 package com.company.lesson5.homeWork;
 
-public class BubbleSorterInverted {
+public class BubbleSorterInvertedWithBreak {
     public static void sort(int[] array) {
         first:
         for (int i = 0; i < array.length; i++) {
