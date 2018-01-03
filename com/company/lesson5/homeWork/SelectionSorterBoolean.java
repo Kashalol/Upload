@@ -15,8 +15,8 @@ public class SelectionSorterBoolean {
                     arrayChangeBoolean = true;
 
                 }
-                if (j == 0 && !arrayChangeBoolean) {
-                    return;
+                if (j == array.length -1 && !arrayChangeBoolean) {
+                    break;
                 }
             }
             array[pos] = array[i];

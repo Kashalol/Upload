@@ -15,7 +15,7 @@ public class BubbleSorterBoolean {
                     arrayChangeBoolean = true;
                 }
                 if (j == i + 1 && !arrayChangeBoolean) {
-                    return;
+                    break;
                 }
             }
         }
