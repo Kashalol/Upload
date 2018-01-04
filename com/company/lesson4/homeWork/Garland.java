@@ -48,10 +48,7 @@ public class Garland {
             for (int i3 = 0; i3 < i2; i3++) {
                 i1 = ~i1;
                 String trans = Integer.toBinaryString(i1);
-                int dlinaStroki = trans.length();
-                for (int i4 = 32; dlinaStroki < i4; dlinaStroki++) {
-                    System.out.print("0");
-                }
+                addingZero(trans);
                 System.out.println(trans);
             }
             return i1;
@@ -69,10 +66,7 @@ public class Garland {
             for (int i3 = 0; i3 < i2; i3++) {
                 i1 = i1 << 1;
                 String trans = Integer.toBinaryString(i1);
-                int dlinaStroki = trans.length();
-                for (int i4 = 32; dlinaStroki < i4; dlinaStroki++) {
-                    System.out.print("0");
-                }
+                addingZero(trans);
                 System.out.println(trans);
             }
             return i1;
@@ -90,10 +84,7 @@ public class Garland {
             for (int i3 = 0; i3 < i2; i3++) {
                 i1 = i1 >> 1;
                 String trans = Integer.toBinaryString(i1);
-                int dlinaStroki = trans.length();
-                for (int i4 = 32; dlinaStroki < i4; dlinaStroki++) {
-                    System.out.print("0");
-                }
+                addingZero(trans);
                 System.out.println(trans);
             }
             return i1;
@@ -114,11 +105,15 @@ public class Garland {
     static int garlandState(int i1) {
         System.out.println("Вот так выглядит ваша гирлянда сейчас");
         String trans = Integer.toBinaryString(i1);
+        addingZero(trans);
+        System.out.println(trans);
+        return i1;
+    }
+
+    private static void addingZero(String trans) {
         int dlinaStroki = trans.length();
         for (int i4 = 32; dlinaStroki < i4; dlinaStroki++) {
             System.out.print("0");
         }
-        System.out.println(trans);
-        return i1;
     }
 }
