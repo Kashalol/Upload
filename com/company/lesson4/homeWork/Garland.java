@@ -48,7 +48,7 @@ public class Garland {
         }
     }
 
-    static int switching(int i1) { //метод для миганий гирлянды
+    static void switching(int i1) { //метод для миганий гирлянды
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество миганий");
         if (sc1.hasNextInt()) {
@@ -59,14 +59,12 @@ public class Garland {
                 addingZero(trans);
                 System.out.println(trans);
             }
-            return i1;
         } else {
             System.out.println("Ошибка ввода");
-            return 0;
         }
     }
 
-    static int movingLeft(int i1) { //метод для сдвига гирлянды влево
+    static void movingLeft(int i1) { //метод для сдвига гирлянды влево
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
@@ -77,14 +75,12 @@ public class Garland {
                 addingZero(trans);
                 System.out.println(trans);
             }
-            return i1;
         } else {
             System.out.println("Ошибка ввода");
-            return 0;
         }
     }
 
-    static int movingRight(int i1) { //метод для сдвига гирлянды вправо
+    static void movingRight(int i1) { //метод для сдвига гирлянды вправо
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
@@ -95,10 +91,8 @@ public class Garland {
                 addingZero(trans);
                 System.out.println(trans);
             }
-            return i1;
         } else {
             System.out.println("Ошибка ввода");
-            return 0;
         }
     }
 
