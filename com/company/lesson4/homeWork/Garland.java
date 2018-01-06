@@ -48,73 +48,72 @@ public class Garland {
         }
     }
 
-    static void switching(int i1) { //метод для миганий гирлянды
+    static void switching(int currentGarland) { //метод для миганий гирлянды
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество миганий");
         if (sc1.hasNextInt()) {
-            int i2 = sc1.nextInt();
-            for (int i3 = 0; i3 < i2; i3++) {
-                i1 = ~i1;
-                String trans = Integer.toBinaryString(i1);
-                addingZero(trans);
-                System.out.println(trans);
+            int modeUsages = sc1.nextInt();
+            for (int i = 0; i < modeUsages; i++) {
+                currentGarland = ~currentGarland;
+                printingResult(currentGarland);
             }
         } else {
             System.out.println("Ошибка ввода");
         }
     }
 
-    static void movingLeft(int i1) { //метод для сдвига гирлянды влево
+    static void movingLeft(int currentGarland) { //метод для сдвига гирлянды влево
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
-            int i2 = sc1.nextInt();
-            for (int i3 = 0; i3 < i2; i3++) {
-                i1 = i1 << 1;
-                String trans = Integer.toBinaryString(i1);
-                addingZero(trans);
-                System.out.println(trans);
+            int modeUsages = sc1.nextInt();
+            for (int i = 0; i < modeUsages; i++) {
+                currentGarland = currentGarland << 1;
+                printingResult(currentGarland);
             }
         } else {
             System.out.println("Ошибка ввода");
         }
     }
 
-    static void movingRight(int i1) { //метод для сдвига гирлянды вправо
+    static void movingRight(int currentGarland) { //метод для сдвига гирлянды вправо
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
-            int i2 = sc1.nextInt();
-            for (int i3 = 0; i3 < i2; i3++) {
-                i1 = i1 >> 1;
-                String trans = Integer.toBinaryString(i1);
-                addingZero(trans);
-                System.out.println(trans);
+            int modeUsage = sc1.nextInt();
+            for (int i = 0; i < modeUsage; i++) {
+                currentGarland = currentGarland >> 1;
+                printingResult(currentGarland);
             }
         } else {
             System.out.println("Ошибка ввода");
         }
     }
 
-    static void firstLamp(int i1) { //метод проверяющий горение первой лампочки с правого края
-        if ((i1 & 1) == 1) {
+    static void firstLamp(int currentGarland) { //метод проверяющий горение первой лампочки с правого края
+        if ((currentGarland & 1) == 1) {
             System.out.println("Первая лампочка горит");
         } else {
             System.out.println("Первая лампа не горит");
         }
     }
 
-    static int garlandState(int i1) { //метод показывающий гирлянду
+    static int garlandState(int currentGarland) { //метод показывающий гирлянду
         System.out.println("Вот так выглядит ваша гирлянда сейчас");
-        String trans = Integer.toBinaryString(i1);
+        printingResult(currentGarland);
+        return currentGarland;
+    }
+
+    private static void printingResult(int currentGarland) {
+        String trans = Integer.toBinaryString(currentGarland);
         addingZero(trans);
         System.out.println(trans);
-        return i1;
     }
+
 
     private static void addingZero(String trans) { //метод добавляющий нули в начало вывода до полной длины
         int dlinaStroki = trans.length();
-        for (int i4 = 32; dlinaStroki < i4; dlinaStroki++) {
+        for (int i = 32; dlinaStroki < i; dlinaStroki++) {
             System.out.print("0");
         }
     }
