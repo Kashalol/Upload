@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Adding2 {
     public static void main(String[] args) {
         Scanner sc1 = new Scanner(System.in);
-        int i1 = inputed(sc1);
-        int i2 = inputed(sc1);
-        int i3 = i1 + i2;
-        System.out.println(i1 + " + " + i2 + " = " + i3);
+        int a = inputed(sc1);
+        int b = inputed(sc1);
+        int result = a + b;
+        System.out.println(a + " + " + b + " = " + result);
     }
 
     public static int inputed(Scanner sc1) {
