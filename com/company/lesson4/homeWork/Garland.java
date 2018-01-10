@@ -7,7 +7,7 @@ public class Garland {
         garlandCreation();
     }
 
-    private static void garlandCreation() { //метод создающий гирлянду из введенного числа
+    private static void garlandCreation() {
         System.out.println("Представьте,что у вас есть гирлянда с 32 лампочками");
         System.out.println("Введите любое целое число,которое превратится в Вашу гирлянду");
         Scanner sc1 = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class Garland {
         }
     }
 
-    private static void modeChoose(Scanner sc1) { //метод выбора работа гирлянды
+    private static void modeChoose(Scanner sc1) {
         int currentGarland = sc1.nextInt();
         System.out.println("Выберите режим работы гилянды задав номер действия");
         System.out.println("1 Мигание");
@@ -48,7 +48,7 @@ public class Garland {
         }
     }
 
-    static void switching(int currentGarland) { //метод для миганий гирлянды
+    static void switching(int currentGarland) {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество миганий");
         if (sc1.hasNextInt()) {
@@ -62,7 +62,7 @@ public class Garland {
         }
     }
 
-    static void movingLeft(int currentGarland) { //метод для сдвига гирлянды влево
+    static void movingLeft(int currentGarland) {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
@@ -76,7 +76,7 @@ public class Garland {
         }
     }
 
-    static void movingRight(int currentGarland) { //метод для сдвига гирлянды вправо
+    static void movingRight(int currentGarland) {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
@@ -90,7 +90,7 @@ public class Garland {
         }
     }
 
-    static void firstLamp(int currentGarland) { //метод проверяющий горение первой лампочки с правого края
+    static void firstLamp(int currentGarland) {
         if ((currentGarland & 1) == 1) {
             System.out.println("Первая лампочка горит");
         } else {
@@ -98,7 +98,7 @@ public class Garland {
         }
     }
 
-    static int garlandState(int currentGarland) { //метод показывающий гирлянду
+    static int garlandState(int currentGarland) {
         System.out.println("Вот так выглядит ваша гирлянда сейчас");
         printingResult(currentGarland);
         return currentGarland;
@@ -110,8 +110,7 @@ public class Garland {
         System.out.println(trans);
     }
 
-
-    private static void addingZero(String trans) { //метод добавляющий нули в начало вывода до полной длины
+    private static void addingZero(String trans) {
         int dlinaStroki = trans.length();
         for (int i = 32; dlinaStroki < i; dlinaStroki++) {
             System.out.print("0");
