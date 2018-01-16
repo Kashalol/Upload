@@ -40,85 +40,72 @@ public class GarlandThroughSwitchOperator {
         }
     }
 
-    static int switching(int i1) {
+    static void switching(int currentGarland) {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество миганий");
         if (sc1.hasNextInt()) {
-            int i2 = sc1.nextInt();
-            for (int i3 = 0; i3 < i2; i3++) {
-                i1 = ~i1;
-                String trans = Integer.toBinaryString(i1);
-                int dlinaStroki = trans.length();
-                for (int i4 = 32; dlinaStroki < i4; dlinaStroki++) {
-                    System.out.print("0");
-                }
-                System.out.println(trans);
+            int modeUsages = sc1.nextInt();
+            for (int i = 0; i < modeUsages; i++) {
+                currentGarland = ~currentGarland;
+                printingResult(currentGarland);
             }
-            return i1;
         } else {
             System.out.println("Ошибка ввода");
-            return 0;
         }
     }
 
-    static int movingLeft(int i1) {
+    static void movingLeft(int currentGarland) {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
-            int i2 = sc1.nextInt();
-            for (int i3 = 0; i3 < i2; i3++) {
-                i1 = i1 << 1;
-                String trans = Integer.toBinaryString(i1);
-                int dlinaStroki = trans.length();
-                for (int i4 = 32; dlinaStroki < i4; dlinaStroki++) {
-                    System.out.print("0");
-                }
-                System.out.println(trans);
+            int modeUsages = sc1.nextInt();
+            for (int i = 0; i < modeUsages; i++) {
+                currentGarland = currentGarland << 1;
+                printingResult(currentGarland);
             }
-            return i1;
         } else {
             System.out.println("Ошибка ввода");
-            return 0;
         }
     }
 
-    static int movingRight(int i1) {
+    static void movingRight(int currentGarland) {
         Scanner sc1 = new Scanner(System.in);
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
-            int i2 = sc1.nextInt();
-            for (int i3 = 0; i3 < i2; i3++) {
-                i1 = i1 >> 1;
-                String trans = Integer.toBinaryString(i1);
-                int dlinaStroki = trans.length();
-                for (int i4 = 32; dlinaStroki < i4; dlinaStroki++) {
-                    System.out.print("0");
-                }
-                System.out.println(trans);
+            int modeUsage = sc1.nextInt();
+            for (int i = 0; i < modeUsage; i++) {
+                currentGarland = currentGarland >> 1;
+                printingResult(currentGarland);
             }
-            return i1;
         } else {
             System.out.println("Ошибка ввода");
-            return 0;
         }
     }
 
-    static void firstLamp(int i1) {
-        if ((i1 & 1) == 1) {
+    static void firstLamp(int currentGarland) {
+        if ((currentGarland & 1) == 1) {
             System.out.println("Первая лампочка горит");
         } else {
             System.out.println("Первая лампа не горит");
         }
     }
 
-    static int garlandState(int i1) {
+    static int garlandState(int currentGarland) {
         System.out.println("Вот так выглядит ваша гирлянда сейчас");
-        String trans = Integer.toBinaryString(i1);
+        printingResult(currentGarland);
+        return currentGarland;
+    }
+
+    private static void printingResult(int currentGarland) {
+        String trans = Integer.toBinaryString(currentGarland);
+        addingZero(trans);
+        System.out.println(trans);
+    }
+
+    private static void addingZero(String trans) {
         int dlinaStroki = trans.length();
-        for (int i4 = 32; dlinaStroki < i4; dlinaStroki++) {
+        for (int i = 32; dlinaStroki < i; dlinaStroki++) {
             System.out.print("0");
         }
-        System.out.println(trans);
-        return i1;
     }
 }

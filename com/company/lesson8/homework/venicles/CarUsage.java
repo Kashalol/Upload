@@ -3,9 +3,9 @@ package com.company.lesson8.homework.venicles;
 import com.company.lesson8.homework.details.Engine;
 import com.company.lesson8.homework.proffesions.Driver;
 
-class Car{
+class Car {
     private String brand;
-    private String carType;
+    private String carClass;
     private int weight;
     private Engine engine;
     private Driver driver;
@@ -13,9 +13,9 @@ class Car{
     public Car() {
     }
 
-    public Car(String brand, String carType, int weight, Engine engine, Driver driver) {
+    public Car(String brand, String carClass, int weight, Engine engine, Driver driver) {
         this.brand = brand;
-        this.carType = carType;
+        this.carClass = carClass;
         this.weight = weight;
         this.engine = engine;
         this.driver = driver;
@@ -29,12 +29,12 @@ class Car{
         this.brand = brand;
     }
 
-    public String getCarType() {
-        return carType;
+    public String getCarClass() {
+        return carClass;
     }
 
     public void setCarType(String carType) {
-        this.carType = carType;
+        this.carClass = carType;
     }
 
     public int getWeight() {
@@ -60,35 +60,42 @@ class Car{
     public void setDriver(Driver driver) {
         this.driver = driver;
     }
-    public void start(){
+
+    public void start() {
         System.out.println("Поехали");
     }
-    public void stop(){
+
+    public void stop() {
         System.out.println("Останавливаемся");
     }
-    public void turnLeft(){
+
+    public void turnLeft() {
         System.out.println("Поворачиваем налево");
     }
-    public void turnRight(){
+
+    public void turnRight() {
         System.out.println("Поворачиваем направо");
     }
-    public void fullInfo(){
+
+    public void fullInfo() {
         System.out.println("Данные об автомобиле");
-        System.out.println("Проивзодитель автомобиля : "+brand);
-        System.out.println("Класс автомобиля : "+carType);
-        System.out.println("Вес автомобиля : "+weight);
+        System.out.println("Проивзодитель автомобиля : " + brand);
+        System.out.println("Класс автомобиля : " + carClass);
+        System.out.println("Вес автомобиля : " + weight);
         System.out.println("Данные о двигателе");
-        System.out.println("Мощность двигателя : "+engine.getPower());
-        System.out.println("Проивзодитель двигателя : "+engine.getManufacturer());
+        System.out.println("Мощность двигателя : " + engine.getPower());
+        System.out.println("Проивзодитель двигателя : " + engine.getManufacturer());
         System.out.println("Данные о водителе");
-        System.out.println("ФИО : "+ driver.getFullName());
-        System.out.println("Опыт вождения"+driver.getDrivingExperience());
+        System.out.println("ФИО : " + driver.getFullName());
+        System.out.println("Опыт вождения : " + driver.getDrivingExperience());
     }
 }
 
 public class CarUsage {
     public static void main(String[] args) {
-        Car car1 = new Car();
+        Engine engine1 = new Engine();
+        Driver driver1 = new Driver();
+        Car car1 = new Car("Suzuki", "B", 1050, engine1, driver1);
         car1.start();
         car1.stop();
         car1.turnLeft();

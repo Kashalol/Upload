@@ -1,6 +1,6 @@
 package com.company.lesson8.homework.details;
 
-public class Engine{
+public class Engine {
     int power;
     String manufacturer;
 

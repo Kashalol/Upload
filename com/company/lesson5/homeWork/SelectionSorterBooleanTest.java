@@ -13,7 +13,7 @@ public class SelectionSorterBooleanTest {
         };
         for (int[] arr : data) {
             System.out.print(Arrays.toString(arr) + " => ");
-            SelectionSorterBoolean.sort(arr);
+            SelectionSorterBoolean2.sort(arr);
             System.out.println(Arrays.toString(arr));
         }
     }

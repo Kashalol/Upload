@@ -1,11 +1,12 @@
 package com.company.lesson8.homework.proffesions;
 
-class Person{
+class Person {
     String fullName;
 
-    public Person(){
+    public Person() {
 
     }
+
     public Person(String fullInfo) {
         this.fullName = fullInfo;
     }
@@ -17,7 +18,4 @@ class Person{
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
-}
-
-public class PersonUsage {
 }
