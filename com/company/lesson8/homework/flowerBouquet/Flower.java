@@ -73,6 +73,7 @@ public class Flower {
                 ", price=" + price +
                 '}';
     }
+
     public static void bouquetPrice(Flower[] bouquet) {
         double priceOfBouquet = 0.0;
         for (int i = 0; i < bouquet.length; i++) {
