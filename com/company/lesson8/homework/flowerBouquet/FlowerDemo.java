@@ -1,4 +1,4 @@
-package com.company.lesson8.homework.NotCarHomework;
+package com.company.lesson8.homework.flowerBouquet;
 
 public class FlowerDemo {
     static int flowersSold;
@@ -25,9 +25,7 @@ public class FlowerDemo {
         double priceOfBouquet = 0.0;
         for (int i = 0; i < bouquet.length; i++) {
             priceOfBouquet += bouquet[i].getPrice();
-            if (i == bouquet.length - 1) {
-                System.out.println("Цена букета составляет : " + priceOfBouquet);
-            }
         }
+        System.out.println("Цена букета составляет : " + priceOfBouquet);
     }
 }
