@@ -1,7 +1,7 @@
 package com.company.lesson8.homework.flowerBouquet;
 
 public class FlowerDemo {
-    static int flowersSold;
+
 
     public static void main(String[] args) {
         Daisy daisy1 = new Daisy("Ukraine", 26, 0.85, "Pink");
@@ -15,18 +15,10 @@ public class FlowerDemo {
         Flower[] bouquetOfRoses = {rose1, rose1, rose1, rose1, rose2, rose2, rose2, rose2};
         Flower[] bouquetDifferent = {daisy1, daisy2, daisy1, daisy2, clove2, clove2, clove1, tulip2};
         Flower[] bouquetOfTulips = {tulip1, tulip1, tulip1, tulip1, tulip2};
-        bouquetPrice(bouquetOfRoses);
-        bouquetPrice(bouquetDifferent);
-        bouquetPrice(bouquetOfTulips);
-        flowersSold = bouquetOfRoses.length + bouquetDifferent.length + bouquetOfTulips.length;
-        System.out.println("Количество проданных цветов : " + flowersSold);
-    }
-
-    public static void bouquetPrice(Flower[] bouquet) {
-        double priceOfBouquet = 0.0;
-        for (int i = 0; i < bouquet.length; i++) {
-            priceOfBouquet += bouquet[i].getPrice();
-        }
-        System.out.println("Цена букета составляет : " + priceOfBouquet);
+        Flower.bouquetPrice(bouquetOfRoses);
+        Flower.bouquetPrice(bouquetDifferent);
+        Flower.bouquetPrice(bouquetOfTulips);
+        Flower.setFlowersSold(bouquetOfRoses.length + bouquetDifferent.length + bouquetOfTulips.length);
+        System.out.println("Количество проданных цветов : " + Flower.getFlowersSold());
     }
 }

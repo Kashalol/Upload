@@ -3,6 +3,7 @@ package com.company.lesson8.homework.flowerBouquet;
 import java.util.Objects;
 
 public class Flower {
+    private static int flowersSold;
     private String country;
     private int expDate;
     private double price;
@@ -14,6 +15,14 @@ public class Flower {
     }
 
     public Flower() {
+    }
+
+    public static int getFlowersSold() {
+        return flowersSold;
+    }
+
+    public static void setFlowersSold(int flowersSold) {
+        Flower.flowersSold = flowersSold;
     }
 
     public String getCountry() {
@@ -63,5 +72,12 @@ public class Flower {
                 ", expDate=" + expDate +
                 ", price=" + price +
                 '}';
+    }
+    public static void bouquetPrice(Flower[] bouquet) {
+        double priceOfBouquet = 0.0;
+        for (int i = 0; i < bouquet.length; i++) {
+            priceOfBouquet += bouquet[i].getPrice();
+        }
+        System.out.println("Цена букета составляет : " + priceOfBouquet);
     }
 }
