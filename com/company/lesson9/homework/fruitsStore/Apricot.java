@@ -1,9 +1,9 @@
-package com.company.lesson9.homework.FruitStore;
+package com.company.lesson9.homework.fruitsStore;
 
 import java.util.Objects;
 
 public class Apricot extends Fruit {
-    double apricotPrice;
+    private double apricotPrice;
 
     public Apricot(double weight, double price) {
         super(weight);
@@ -39,14 +39,12 @@ public class Apricot extends Fruit {
     @Override
     public String toString() {
         return "Apricot{" +
-                "price=" + apricotPrice +
-                ", weight=" + weight +
-                '}';
+                "apricotPrice=" + apricotPrice +
+                "} " + super.toString();
     }
 
     @Override
     double priceReturn(double weight) {
-        double result = apricotPrice * weight;
-        return result;
+        return apricotPrice * weight;
     }
 }

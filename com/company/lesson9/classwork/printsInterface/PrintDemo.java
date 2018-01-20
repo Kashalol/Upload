@@ -1,4 +1,4 @@
-package com.company.lesson9.classwork.PrintInterface;
+package com.company.lesson9.classwork.printsInterface;
 
 public class PrintDemo {
     public static void main(String[] args) {

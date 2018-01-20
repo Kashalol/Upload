@@ -1,4 +1,4 @@
-package com.company.lesson8.homework.AnimalDoctor;
+package com.company.lesson8.homework.vetDoc;
 
 public class Cat extends Animal {
     private int murchalnikWorkTime;

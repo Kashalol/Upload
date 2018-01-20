@@ -1,4 +1,4 @@
-package com.company.lesson8.homework.AnimalDoctor;
+package com.company.lesson8.homework.vetDoc;
 
 public class Animal {
     private String food;

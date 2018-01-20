@@ -1,4 +1,4 @@
-package com.company.lesson9.classwork.PrintInterface;
+package com.company.lesson9.classwork.printsInterface;
 
 class Magazine implements Printable{
     int price;

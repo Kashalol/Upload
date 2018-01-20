@@ -1,9 +1,9 @@
-package com.company.lesson9.homework.FruitStore;
+package com.company.lesson9.homework.fruitsStore;
 
 import java.util.Objects;
 
 abstract class Fruit {
-    double weight;
+    private double weight;
 
     public Fruit(double weight) {
         this.weight = weight;
@@ -41,9 +41,17 @@ abstract class Fruit {
                 '}';
     }
 
-    final void printManufacturerInfo() {
+    public final void printManufacturerInfo() {
         System.out.println("Made in Ukraine");
     }
 
     abstract double priceReturn(double weight);
+
+    public static double fruitSumm(Fruit... fruits) {
+        double result = 0;
+        for (Fruit fruit : fruits) {
+            result += fruit.priceReturn(fruit.getWeight());
+        }
+        return result;
+    }
 }
