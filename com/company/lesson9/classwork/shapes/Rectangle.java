@@ -23,6 +23,7 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw() {
+        System.out.println("Рисуем прямоугольник");
     }
 
     @Override
@@ -36,7 +37,6 @@ public class Rectangle extends Shape {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(super.hashCode(), coor);
     }
 

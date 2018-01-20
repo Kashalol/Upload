@@ -1,4 +1,4 @@
-package com.company.lesson9.homework.CircleMathOperations;
+package com.company.lesson9.homework.circleMath;
 
 import java.util.Objects;
 
