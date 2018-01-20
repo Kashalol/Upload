@@ -8,8 +8,8 @@ public class CarDemo {
         Engine engine1 = new Engine();
         Driver driver1 = new Driver();
         Car car1 = new Car("Suzuki", "B", 1050, engine1, driver1);
-        Lorry lorry = new Lorry("Tata","C",1800,engine1,driver1,800);
-        SportCar sportCar = new SportCar("Ferrari","B",768,engine1,driver1,267.4);
+        Lorry lorry = new Lorry("Tata", "C", 1800, engine1, driver1, 800);
+        SportCar sportCar = new SportCar("Ferrari", "B", 768, engine1, driver1, 267.4);
         lorry.start();
         lorry.stop();
         lorry.turnLeft();
