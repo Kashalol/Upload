@@ -1,6 +1,6 @@
 package com.company.lesson8.classwork;
 
-class Student {
+public class Student {
     private String firstName, lastName, group;
     private double averageMark;
 
@@ -44,16 +44,10 @@ class Student {
     }
 
     public int getScholarship() {
-        if (averageMark == 5)
-        {
+        if (averageMark == 5) {
             return 100;
-        }
-        else{
+        } else {
             return 80;
         }
     }
-}
-
-public class University {
-
 }
