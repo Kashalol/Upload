@@ -7,7 +7,7 @@ public class Driver extends Person {
 
     }
 
-    public Driver(String fullName) {
+    public Driver(String fullName,int drivingExperience) {
         super(fullName);
         this.drivingExperience = drivingExperience;
     }
