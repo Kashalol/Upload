@@ -10,8 +10,9 @@ public class VetDemo {
         Horse horse1 = new Horse();
         horse1.setLocation("конюшне");
         Animal[] patients = {dog1, cat1, horse1};
-        for (Animal animal:patients) {
+        for (Animal animal : patients) {
             vet.treatAnimal(animal);
+            animal.sleep();
         }
     }
 }

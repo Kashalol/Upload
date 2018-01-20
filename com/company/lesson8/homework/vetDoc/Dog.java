@@ -26,4 +26,8 @@ public class Dog extends Animal {
     public void eat() {
         System.out.println("мясные продукты");
     }
+
+    public void sleep(){
+        System.out.println("Собака спит в будке");
+    }
 }

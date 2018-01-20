@@ -26,4 +26,8 @@ public class Horse extends Animal {
     public void eat() {
         System.out.println("продукты растительного происхождения");
     }
+
+    public void sleep(){
+        System.out.println("Лошадь спит в стойле");
+    }
 }

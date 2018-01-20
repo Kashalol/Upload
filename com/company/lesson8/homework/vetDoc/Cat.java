@@ -26,4 +26,8 @@ public class Cat extends Animal {
     public void eat() {
         System.out.println("мясные,молочные и рыбные продукты");
     }
+
+    public void sleep(){
+        System.out.println("Кошка спит в коробке");
+    }
 }
