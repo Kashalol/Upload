@@ -1,10 +1,9 @@
 package com.company.lesson8.homework.proffesions;
 
-class Person {
-    String fullName;
+public class Person {
+    private String fullName;
 
     public Person() {
-
     }
 
     public Person(String fullInfo) {

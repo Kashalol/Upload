@@ -1,8 +1,8 @@
 package com.company.lesson8.homework.details;
 
 public class Engine {
-    int power;
-    String manufacturer;
+    private int power;
+    private String manufacturer;
 
     public Engine(int power, String manufacturer) {
         this.power = power;

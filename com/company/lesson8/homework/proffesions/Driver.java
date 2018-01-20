@@ -1,7 +1,7 @@
 package com.company.lesson8.homework.proffesions;
 
 public class Driver extends Person {
-    int drivingExperience;
+    private int drivingExperience;
 
     public Driver() {
 

@@ -90,16 +90,3 @@ class Car {
         System.out.println("Опыт вождения : " + driver.getDrivingExperience());
     }
 }
-
-public class CarUsage {
-    public static void main(String[] args) {
-        Engine engine1 = new Engine();
-        Driver driver1 = new Driver();
-        Car car1 = new Car("Suzuki", "B", 1050, engine1, driver1);
-        car1.start();
-        car1.stop();
-        car1.turnLeft();
-        car1.turnRight();
-        car1.fullInfo();
-    }
-}
