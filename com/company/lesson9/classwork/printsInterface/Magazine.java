@@ -1,6 +1,6 @@
 package com.company.lesson9.classwork.printsInterface;
 
-class Magazine implements Printable{
+class Magazine implements Printable {
     int price;
 
     public Magazine(int price) {
@@ -22,4 +22,13 @@ class Magazine implements Printable{
     public void print() {
         System.out.println("Журнал напечатан");
     }
+
+    public static void printMagazines(Printable[] printable) {
+        for (Printable magazine : printable) {
+            if (magazine instanceof Magazine) {
+                System.out.println("Цена журнала : " + ((Magazine) magazine).getPrice() + " USD");
+            }
+        }
+    }
+
 }

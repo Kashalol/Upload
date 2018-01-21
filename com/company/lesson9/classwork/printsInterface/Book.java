@@ -1,6 +1,6 @@
 package com.company.lesson9.classwork.printsInterface;
 
-class Book implements Printable{
+class Book implements Printable {
     int weight;
 
     public Book(int weight) {
@@ -21,5 +21,13 @@ class Book implements Printable{
     @Override
     public void print() {
         System.out.println("Книга напечатана");
+    }
+
+    public static void printBooks(Printable[] printable) {
+        for (Printable book : printable) {
+            if (book instanceof Book) {
+                System.out.println("Вес книги " + ((Book) book).getWeight() + " КГ");
+            }
+        }
     }
 }
