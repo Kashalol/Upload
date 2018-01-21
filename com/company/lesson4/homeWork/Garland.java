@@ -29,13 +29,13 @@ public class Garland {
         if (sc1.hasNextInt()) {
             int mode = sc1.nextInt();
             if (mode == 1) {
-                switching(currentGarland);
+                switching(currentGarland, sc1);
             }
             if (mode == 2) {
-                movingLeft(currentGarland);
+                movingLeft(currentGarland, sc1);
             }
             if (mode == 3) {
-                movingRight(currentGarland);
+                movingRight(currentGarland, sc1);
             }
             if (mode == 4) {
                 firstLamp(currentGarland);
@@ -48,8 +48,7 @@ public class Garland {
         }
     }
 
-    static void switching(int currentGarland) {
-        Scanner sc1 = new Scanner(System.in);
+    static void switching(int currentGarland, Scanner sc1) {
         System.out.println("Введите количество миганий");
         if (sc1.hasNextInt()) {
             int modeUsages = sc1.nextInt();
@@ -62,8 +61,7 @@ public class Garland {
         }
     }
 
-    static void movingLeft(int currentGarland) {
-        Scanner sc1 = new Scanner(System.in);
+    static void movingLeft(int currentGarland, Scanner sc1) {
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
             int modeUsages = sc1.nextInt();
@@ -76,8 +74,7 @@ public class Garland {
         }
     }
 
-    static void movingRight(int currentGarland) {
-        Scanner sc1 = new Scanner(System.in);
+    static void movingRight(int currentGarland, Scanner sc1) {
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
             int modeUsage = sc1.nextInt();
@@ -98,10 +95,9 @@ public class Garland {
         }
     }
 
-    static int garlandState(int currentGarland) {
+    static void garlandState(int currentGarland) {
         System.out.println("Вот так выглядит ваша гирлянда сейчас");
         printingResult(currentGarland);
-        return currentGarland;
     }
 
     private static void printingResult(int currentGarland) {
