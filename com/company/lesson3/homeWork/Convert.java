@@ -22,7 +22,11 @@ public class Convert {
         long l1 = 82652;
         byte b5 = (byte) l1; //явное
         char c1 = 'r';
-        byte b6 = (byte) c1;
+        byte b6 = (byte) c1; //явное
+        float f1 = 13.4f;
+        byte b7 = (byte) f1; //явное
+        double d1 = 451.4;
+        byte b8 = (byte) d1; //явное
     }
 
     public static void toShort() {
@@ -34,6 +38,12 @@ public class Convert {
         short s6 = (short) i1; //явное
         long l1 = 285;
         short s5 = (short) l1; //явное
+        float f1 = 13.54f;
+        short s7 = (short) f1; //явное
+        double d1 = 457.87;
+        short s8 = (short) d1; //явное
+        char c1 = 't';
+        short s9 =(short) c1; //явное
     }
 
     public static void toChar() {
@@ -49,9 +59,9 @@ public class Convert {
         long l1 = 123;
         char c6 = (char) l1; //явное
         float f1 = 37.32f;
-        char c7 = (char) f1;
+        char c7 = (char) f1; //явное
         double d1 = 373;
-        char c8 = (char) d1;
+        char c8 = (char) d1; //явное
     }
 
     public static void toInt() {
@@ -84,6 +94,8 @@ public class Convert {
         long l6 = (long) f1; //явное
         double d1 = 45212.1235;
         long l7 = (long) d1; //явное
+        char c1 = 'j';
+        long l8 = c1; //неявное
     }
 
     public static void toFloat() {
@@ -96,9 +108,11 @@ public class Convert {
         short s1 = 34;
         float f5 = (float) s1; //явное
         int i1 = 234;
-        float f6 = (float) i1; //явное
+        float f6 = i1; //явное
         long l1 = 2836;
-        float f7 = (float) l1; //явное
+        float f7 = l1; //неявное
+        char c1 = 'r';
+        float f8 = c1; //неявное
     }
 
     public static void toDouble() {
@@ -107,12 +121,14 @@ public class Convert {
         float f1 = 235.243f;
         double d3 = f1; //неявное
         byte b1 = 2;
-        double d4 = (double) b1; //явное
+        double d4 = b1; //явное
         short s1 = 33;
-        double d5 = (double) s1; //явное
+        double d5 = s1; //явное
         int i1 = 234;
-        double d6 = (double) i1; //явное
+        double d6 = i1; //явное
         long l1 = 21751;
-        double d7 = (double) l1; //явное
+        double d7 = l1; //явное
+        char c1 = 'u';
+        long l8 = c1; //неявное
     }
 }
