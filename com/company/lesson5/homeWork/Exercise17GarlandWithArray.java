@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 public class Exercise17GarlandWithArray {
     public static void main(String[] args) {
+        modeChoose();
+    }
+
+    private static void modeChoose() {
         int[] garland = createGarlandArray();
         System.out.println("Представьте,что у вас есть гирлянда с 32 лампочками");
         System.out.println("Выберите режим работы гилянды задав номер действия");
@@ -18,13 +22,13 @@ public class Exercise17GarlandWithArray {
             int mode = scan.nextInt();
             switch (mode) {
                 case 1:
-                    switching(garland);
+                    switching(garland, scan);
                     break;
                 case 2:
-                    movingLeft(garland);
+                    movingLeft(garland, scan);
                     break;
                 case 3:
-                    movingRight(garland);
+                    movingRight(garland, scan);
                     break;
                 case 4:
                     firstLamp(garland);
@@ -38,15 +42,14 @@ public class Exercise17GarlandWithArray {
         }
     }
 
-    static void switching(int[] garland2) {
+    static void switching(int[] garland2, Scanner sc1) {
         int[] switchedGarland = new int[32];
-        int i, tmp = 0;
-        Scanner sc1 = new Scanner(System.in);
+        int tmp;
         System.out.println("Введите количество миганий");
         if (sc1.hasNextInt()) {
-            int i2 = sc1.nextInt();
-            for (int i3 = 0; i3 < i2; i3++) {
-                for (i = 0; i < 32; i++) {
+            int switchesAmount = sc1.nextInt();
+            for (int i = 0; i < switchesAmount; i++) {
+                for (int j = 0; i < 32; j++) {
                     if ((garland2[i]) == 0) {
                         tmp = 1;
                     } else {
@@ -62,8 +65,7 @@ public class Exercise17GarlandWithArray {
         }
     }
 
-    static void movingRight(int[] garland2) {
-        Scanner sc1 = new Scanner(System.in);
+    static void movingRight(int[] garland2, Scanner sc1) {
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
             int movingNumber = sc1.nextInt();
@@ -77,8 +79,7 @@ public class Exercise17GarlandWithArray {
         }
     }
 
-    static void movingLeft(int[] garland2) {
-        Scanner sc1 = new Scanner(System.in);
+    static void movingLeft(int[] garland2, Scanner sc1) {
         System.out.println("Введите количество смещений");
         if (sc1.hasNextInt()) {
             int movingNumber = sc1.nextInt();
