@@ -3,7 +3,7 @@ package com.company.lesson10.homework.clothes;
 public enum Sizes {
     XXS(40) {
         public String getDescription() {
-            return "Теплое время года";
+            return "Детский размер";
         }
     }, XS(42), S(44), M(48), L(52);
     private int euroSize;
