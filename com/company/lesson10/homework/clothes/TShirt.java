@@ -3,9 +3,7 @@ package com.company.lesson10.homework.clothes;
 public class TShirt extends Clothes implements MenClothes, WomenClothes {
 
     public TShirt(Sizes size, int price, String color) {
-        this.setSize(size);
-        this.setPrice(price);
-        this.setColor(color);
+        super(size, price, color);
     }
 
     @Override

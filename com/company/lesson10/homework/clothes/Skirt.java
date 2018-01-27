@@ -3,9 +3,7 @@ package com.company.lesson10.homework.clothes;
 public class Skirt extends Clothes implements WomenClothes {
 
     public Skirt(Sizes size, int price, String color) {
-        this.setSize(size);
-        this.setPrice(price);
-        this.setColor(color);
+        super(size, price, color);
     }
 
     @Override

@@ -3,9 +3,7 @@ package com.company.lesson10.homework.clothes;
 public class Tie extends Clothes implements MenClothes {
 
     public Tie(Sizes size, int price, String color) {
-        this.setSize(size);
-        this.setPrice(price);
-        this.setColor(color);
+        super(size, price, color);
     }
 
     @Override

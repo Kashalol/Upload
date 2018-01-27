@@ -10,6 +10,12 @@ public abstract class Clothes {
     public Clothes() {
     }
 
+    public Clothes(Sizes size, int price, String color) {
+        this.size = size;
+        this.price = price;
+        this.color = color;
+    }
+
     public Clothes(Sizes size) {
         this.size = size;
     }
