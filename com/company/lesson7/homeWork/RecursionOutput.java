@@ -9,8 +9,7 @@ public class RecursionOutput {
     }
 
     public static int creatingRandomNumber() {
-        int created = (int) (Math.random() * 50);
-        return created;
+        return (int) (Math.random() * 50);
     }
 
     public static void comparingNumbers(int first, int second) {
