@@ -22,12 +22,14 @@ class ReaderTicket {
     }
 
     public void readerTicketInfoPrint() {
-        String fullReaderTicketInfo = "Full name : " + fullName + "\nTicket number : " + ticketNumber + "\nSpeciality : " + speciality + "\nBirth date : " + birthDate + "\nPhone number : " + phoneNumber + "\n ";
+        String fullReaderTicketInfo = "Full name : " + fullName + "\nTicket number : " + ticketNumber + "\nSpeciality : "
+                + speciality + "\nBirth date : " + birthDate + "\nPhone number : " + phoneNumber + "\n ";
         System.out.println(fullReaderTicketInfo);
     }
 
     public String readerTicketOut() {
-        String fullReaderTicketInfo = "Full name : " + fullName + "\nTicket number : " + ticketNumber + "\nSpeciality : " + speciality + "\nBirth date : " + birthDate + "\nPhone number : " + phoneNumber + "\n ";
+        String fullReaderTicketInfo = "Full name : " + fullName + "\nTicket number : " + ticketNumber + "\nSpeciality : "
+                + speciality + "\nBirth date : " + birthDate + "\nPhone number : " + phoneNumber + "\n ";
         return fullReaderTicketInfo;
     }
 
@@ -60,13 +62,16 @@ class Book {
 
 public class Library {
     public static void main(String[] args) {
-        ReaderTicket readerTicket1 = new ReaderTicket("John Smithson", "01", "Java", "01.01.1999", "3720001");
-        ReaderTicket readerTicket2 = new ReaderTicket("Smith Johnson", "02", "C++", "02.02.1999", "3720002");
+        ReaderTicket readerTicket1 = new ReaderTicket("John Smithson", "01", "Java",
+                "01.01.1999", "3720001");
+        ReaderTicket readerTicket2 = new ReaderTicket("Smith Johnson", "02", "C++",
+                "02.02.1999", "3720002");
         Book book1 = new Book("Азбука");
         Book book2 = new Book("Пушкин А.С");
         Book book3 = new Book("Head First Java");
         ReaderTicket readerTicket3 = fillingReaderTicket03();
-        ReaderTicket.arrayOfTickets(readerTicket1.readerTicketOut(), readerTicket2.readerTicketOut(), readerTicket3.readerTicketOut());
+        ReaderTicket.arrayOfTickets(readerTicket1.readerTicketOut(), readerTicket2.readerTicketOut(),
+                readerTicket3.readerTicketOut());
         takeBook(Book.getAmount());
         takeBook(book1, book2, book3);
         takeBook(book1.getBookName(), book2.getBookName(), book3.getBookName());
