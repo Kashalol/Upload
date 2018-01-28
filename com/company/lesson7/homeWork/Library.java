@@ -69,10 +69,10 @@ public class Library {
         ReaderTicket.arrayOfTickets(readerTicket1.readerTicketOut(), readerTicket2.readerTicketOut(), readerTicket3.readerTicketOut());
         takeBook(Book.getAmount());
         takeBook(book1, book2, book3);
-        takeBook(book1.getBookName(),book2.getBookName(),book3.getBookName());
+        takeBook(book1.getBookName(), book2.getBookName(), book3.getBookName());
         returnBook(Book.getAmount());
         returnBook(book1, book2, book3);
-        returnBook(book1.getBookName(),book2.getBookName(),book3.getBookName());
+        returnBook(book1.getBookName(), book2.getBookName(), book3.getBookName());
 
     }
 
