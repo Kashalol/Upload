@@ -4,66 +4,95 @@ package com.company.lesson7.homeWork;
 import java.util.Arrays;
 
 class Matrix {
+    static final private int LINES = 3;
+    static final private int COLUMNS = 3;
     double[][] array;
-    int lines = 3;
-    int columns = 3;
 
-    public double[][] fillingMatrix(double[][] randomDoubleArray) {
-        randomDoubleArray = new double[lines][columns];
-        for (int linesCounter = 0; linesCounter < lines; linesCounter++) {
-            for (int columnCounter = 0; columnCounter < columns; columnCounter++) {
-                randomDoubleArray[linesCounter][columnCounter] = (Math.random() * 10);
+    public Matrix() {
+    }
+
+    public double[][] getArray() {
+        return array;
+    }
+
+    public void setArray(double[][] array) {
+        this.array = array;
+    }
+
+    public double[][] fillingMatrix() {
+        double[][] randomDoubleArray = new double[LINES][COLUMNS];
+        for (int linesCounter = 0; linesCounter < LINES; linesCounter++) {
+            for (int columnCounter = 0; columnCounter < COLUMNS; columnCounter++) {
+                randomDoubleArray[linesCounter][columnCounter] = (int) (Math.random() * 10);
             }
         }
         return randomDoubleArray;
     }
 
-    public double[][] addingTwoArrays(double[][] matrixBasic, double[][] matrixOperator) {
-        double[][] resultArray = new double[lines][columns];
-        for (int linesCounter = 0; linesCounter < lines; linesCounter++) {
-            for (int columnCounter = 0; columnCounter < columns; columnCounter++) {
-                resultArray[linesCounter][columnCounter] = matrixBasic[linesCounter][columnCounter] + matrixOperator[linesCounter][columnCounter];
+    public void addingTwoArrays(Matrix matrix) {
+        double[][] matrixBasic = this.array;
+        double[][] matrixOperator = matrix.getArray();
+        double[][] resultArray = new double[LINES][COLUMNS];
+        for (int linesCounter = 0; linesCounter < LINES; linesCounter++) {
+            for (int columnCounter = 0; columnCounter < COLUMNS; columnCounter++) {
+                resultArray[linesCounter][columnCounter] = matrixBasic[linesCounter][columnCounter] +
+                        matrixOperator[linesCounter][columnCounter];
             }
         }
-        System.out.println("Результат сложения матрицы :");
+        printingOperationResult(matrixBasic, matrixOperator, resultArray, "Результат сложения матрицы :", "И матрицы :");
+    }
+
+    private void printingOperationResult(double[][] matrixBasic, double[][] matrixOperator, double[][] resultArray, String s, String s2) {
+        System.out.println(s);
         System.out.println(Arrays.deepToString(matrixBasic));
-        System.out.println("И матрицы :");
+        System.out.println(s2);
         System.out.println(Arrays.deepToString(matrixOperator));
         System.out.println("Будет следующим");
         System.out.println(Arrays.deepToString(resultArray));
-        return resultArray;
     }
 
-    public double[][] multiplyOnRandomNumber(double[][] matrixBasic) {
+    public void multiplyOnRandomNumber() {
+        double[][] matrixBasic = this.array;
         int multiplier = (int) (Math.random() * 10);
-        double[][] resultMatrix = new double[lines][columns];
-        for (int linesCounter = 0; linesCounter < lines; linesCounter++) {
-            for (int columnCounter = 0; columnCounter < columns; columnCounter++) {
+        double[][] resultMatrix = new double[LINES][COLUMNS];
+        for (int linesCounter = 0; linesCounter < LINES; linesCounter++) {
+            for (int columnCounter = 0; columnCounter < COLUMNS; columnCounter++) {
                 resultMatrix[linesCounter][columnCounter] = matrixBasic[linesCounter][columnCounter] * multiplier;
             }
         }
-        System.out.println("Результатом умножения матрицы :");
-        System.out.println(Arrays.deepToString(matrixBasic));
-        System.out.println("И числа " + multiplier);
-        System.out.println("Будет следующим :");
-        System.out.println(Arrays.deepToString(resultMatrix));
-        return resultMatrix;
+        printingMultiplyOnNumberResult("Результатом умножения матрицы :", Arrays.deepToString(matrixBasic),
+                "И числа " + multiplier, "Будет следующим :", Arrays.deepToString(resultMatrix));
     }
 
-    public double[][] multiplyingMatrixes(double[][] matrixBasic, double[][] matrixOperator) {
-        double[][] resultArray = new double[lines][columns];
-        for (int linesCounter = 0; linesCounter < lines; linesCounter++) {
-            for (int columnCounter = 0; columnCounter < columns; columnCounter++) {
-                resultArray[linesCounter][columnCounter] = matrixBasic[linesCounter][columnCounter] * matrixOperator[linesCounter][columnCounter];
+    private void printingMultiplyOnNumberResult(String s, String s2, String s3, String s4, String s5) {
+        System.out.println(s);
+        System.out.println(s2);
+        System.out.println(s3);
+        System.out.println(s4);
+        System.out.println(s5);
+    }
+
+    public void multiplyingMatrixes(Matrix matrix) {
+        double[][] matrixBasic = this.array;
+        double[][] matrixOperator = matrix.getArray();
+        double[][] resultArray = new double[LINES][COLUMNS];
+        for (int linesCounter = 0; linesCounter < LINES; linesCounter++) {
+            for (int columnCounter = 0; columnCounter < COLUMNS; columnCounter++) {
+                resultArray[linesCounter][columnCounter] = matrixBasic[linesCounter][0] *
+                        matrixOperator[0][columnCounter] + matrixBasic[linesCounter][1] *
+                        matrixOperator[1][columnCounter] + matrixBasic[linesCounter][2] *
+                        matrixOperator[2][columnCounter];
             }
         }
-        System.out.println("Результат умножения матрицы :");
-        System.out.println(Arrays.deepToString(matrixBasic));
-        System.out.println("На матрицу :");
-        System.out.println(Arrays.deepToString(matrixOperator));
-        System.out.println("Будет следующим");
-        System.out.println(Arrays.deepToString(resultArray));
-        return resultArray;
+        printingOperationResult(matrixBasic, matrixOperator, resultArray,
+                "Результат умножения матрицы :", "На матрицу :");
+    }
+
+    @Override
+    public String toString() {
+        return "Matrix{" +
+                "array =" + Arrays.deepToString(array) +
+                '}';
     }
 }
 
@@ -71,11 +100,13 @@ public class MatrixDemo {
     public static void main(String[] args) {
         Matrix matrix1 = new Matrix();
         Matrix matrix2 = new Matrix();
-        matrix1.fillingMatrix(matrix1.array);
-        matrix2.fillingMatrix(matrix2.array);
-        matrix1.addingTwoArrays(matrix1.fillingMatrix(matrix1.array), matrix2.fillingMatrix(matrix2.array));
-        matrix1.multiplyOnRandomNumber(matrix1.fillingMatrix(matrix1.array));
-        System.out.println(Arrays.deepToString(matrix1.fillingMatrix(matrix1.array)));
-        matrix1.multiplyingMatrixes(matrix1.fillingMatrix(matrix1.array), matrix2.fillingMatrix(matrix2.array));
+        matrix1.setArray(matrix1.fillingMatrix());
+        matrix2.setArray(matrix2.fillingMatrix());
+        matrix1.addingTwoArrays(matrix2);
+        matrix1.multiplyOnRandomNumber();
+        matrix2.multiplyOnRandomNumber();
+        System.out.println(matrix1);
+        System.out.println(matrix2);
+        matrix1.multiplyingMatrixes(matrix2);
     }
 }
