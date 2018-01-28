@@ -24,8 +24,8 @@ public class Exercise16TwoDimensional5x8 {
         int i, j;
         int[][] minMaxArray = new int[5][2];
         for (i = 0; i < 5; i++) {
-            int min = 100;
-            int max = 0;
+            int min = basicArray[0][0];
+            int max = basicArray[0][0];
             for (j = 0; j < 8; j++) {
                 if (basicArray[i][j] > max) {
                     max = basicArray[i][j];
