@@ -61,10 +61,10 @@ public class ConvertTable {
         System.out.print(spaces[2]);
         System.out.print(spaces[2]);
         System.out.print(spaces[3]);
-        System.out.print(spaces[2]);
-        System.out.print(spaces[2]);
-        System.out.print(spaces[2]);
-        System.out.print(spaces[2]);
+        System.out.print(spaces[1]);
+        System.out.print(spaces[1]);
+        System.out.print(spaces[1]);
+        System.out.print(spaces[1]);
         System.out.print(spaces[4]);
     }
 
