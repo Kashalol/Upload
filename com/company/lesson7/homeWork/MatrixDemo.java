@@ -78,10 +78,10 @@ class Matrix {
         double[][] resultArray = new double[LINES][COLUMNS];
         for (int linesCounter = 0; linesCounter < LINES; linesCounter++) {
             for (int columnCounter = 0; columnCounter < COLUMNS; columnCounter++) {
-                resultArray[linesCounter][columnCounter] = matrixBasic[linesCounter][0] *
-                        matrixOperator[0][columnCounter] + matrixBasic[linesCounter][1] *
-                        matrixOperator[1][columnCounter] + matrixBasic[linesCounter][2] *
-                        matrixOperator[2][columnCounter];
+                for (int i = 0; i < 3; i++) {
+                    resultArray[linesCounter][columnCounter] += matrixBasic[linesCounter][i] *
+                            matrixOperator[i][columnCounter];
+                }
             }
         }
         printingOperationResult(matrixBasic, matrixOperator, resultArray,
