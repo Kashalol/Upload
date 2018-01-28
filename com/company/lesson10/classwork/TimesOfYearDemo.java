@@ -6,7 +6,7 @@ public class TimesOfYearDemo {
         System.out.println(bestSeason);
         chooseSeason(bestSeason);
         printAllValues();
-        compareValue(bestSeason);
+        givingValue();
     }
 
     public static void chooseSeason(TimesOfYear bestSeason) {
@@ -36,8 +36,8 @@ public class TimesOfYearDemo {
         }
     }
 
-    public static void compareValue(TimesOfYear bestSeason) {
-        bestSeason = TimesOfYear.valueOf("SPRING");
+    public static void givingValue() {
+        TimesOfYear bestSeason = TimesOfYear.valueOf("SPRING");
         System.out.println(bestSeason);
     }
 }
