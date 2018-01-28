@@ -67,11 +67,8 @@ public class Flower {
 
     @Override
     public String toString() {
-        return "Flower{" +
-                "country='" + country + '\'' +
-                ", expDate=" + expDate +
-                ", price=" + price +
-                '}';
+        return String.format("Flower{" +
+                "country= %s, expDate= %s, price= %s", country, expDate, price);
     }
 
     public static void bouquetPrice(Flower[] bouquet) {
