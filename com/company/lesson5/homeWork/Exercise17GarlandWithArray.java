@@ -49,7 +49,7 @@ public class Exercise17GarlandWithArray {
         if (sc1.hasNextInt()) {
             int switchesAmount = sc1.nextInt();
             for (int i = 0; i < switchesAmount; i++) {
-                for (int j = 0; i < 32; j++) {
+                for (int j = 0; j < 32; j++) {
                     if ((garland2[i]) == 0) {
                         tmp = 1;
                     } else {
