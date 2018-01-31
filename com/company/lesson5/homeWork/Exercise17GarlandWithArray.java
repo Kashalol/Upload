@@ -50,12 +50,12 @@ public class Exercise17GarlandWithArray {
             int switchesAmount = sc1.nextInt();
             for (int i = 0; i < switchesAmount; i++) {
                 for (int j = 0; j < 32; j++) {
-                    if ((garland2[i]) == 0) {
+                    if ((garland2[j]) == 0) {
                         tmp = 1;
                     } else {
                         tmp = 0;
                     }
-                    switchedGarland[i] = tmp;
+                    switchedGarland[j] = tmp;
                 }
                 System.out.println(Arrays.toString(garland2));
                 System.out.println(Arrays.toString(switchedGarland));
