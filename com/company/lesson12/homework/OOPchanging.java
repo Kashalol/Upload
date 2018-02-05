@@ -5,16 +5,22 @@ public class OOPchanging {
         StringBuilder s = new StringBuilder("I think that object oriented programming is a nice philosophy.");
         String sample = "object oriented programming";
         int counter = s.toString().length() / sample.length();
-        changingStringElementSample(s, sample, counter);
-        System.out.println(s);
+        usingStringReplace(s.toString(), sample);
+        System.out.println((changingStringElementSample(s, sample, counter)).toString());
     }
 
-    private static void changingStringElementSample(StringBuilder s, String sample, int counter) {
+    private static StringBuilder changingStringElementSample(StringBuilder s, String sample, int counter) {
         for (int i = 0; i < counter; i++) {
             int start = s.indexOf(sample);
             if (s.toString().contains(sample)) {
                 s.replace(start, start + sample.length(), "OOP");
             }
         }
+        return s;
+    }
+
+    private static void usingStringReplace(String s, String sample) {
+        System.out.println(s);
+        System.out.println(s.replace(sample,"OOP"));
     }
 }
