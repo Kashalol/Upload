@@ -24,9 +24,7 @@ public class DifferentSymbols {
 
     private static String[] fillingFinalArray(int finalArrayLength, String[] array) {
         String[] finalArray = new String[finalArrayLength];
-        for (int j = 0; j < finalArrayLength; j++) {
-            finalArray[j] = array[j];
-        }
+        System.arraycopy(array, 0, finalArray, 0, finalArrayLength);
         return finalArray;
     }
 
@@ -45,7 +43,7 @@ public class DifferentSymbols {
     }
 
     public static int findingAmountOfUniqueChars(String string) {
-        StringBuilder tmp = new StringBuilder("");
+        StringBuilder tmp = new StringBuilder();
         for (int i = 0; i < string.length(); i++) {
             if (!tmp.toString().contains(String.valueOf(string.charAt(i)))) {
                 tmp.append(string.charAt(i));
